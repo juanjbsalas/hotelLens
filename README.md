@@ -1,1 +1,3 @@
-# hotelLens
+# Hotel-Lens
+
+Description: A Hotel Finder designed to help travelers who are 18 years old and above easily locate hotels that accept bookings from younger adults. Many hotels have age restrictions for check-in, often requiring guests to be 21 or older, which can make it challenging for 18–20-year-olds to find suitable accommodations. This platform simplifies that process by providing a curated list of hotels that specifically allow 18+ check-ins.
