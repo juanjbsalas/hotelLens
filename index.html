@@ -1,1 +1,88 @@
-<!-- blah -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find and book premium hotels worldwide with Hotel Lens - your trusted travel companion">
+    <meta name="keywords" content="hotels, booking, travel, accommodation, vacation">
+    <title>Hotel Lens - Premium Hotel Bookings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" aria-label="Hotel Lens Hotel Booking">Hotel Lens</div>
+            <ul class="nav-links" role="navigation">
+                <li><a href="#home" aria-label="Go to home section">Home</a></li>
+                <li><a href="#hotels" aria-label="View featured hotels">Hotels</a></li>
+                <li><a href="#about" aria-label="About our services">About</a></li>
+                <li><a href="#contact" aria-label="Contact us">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Find Your Perfect Stay - For Ages 18</h1>
+                <p>Discover exceptional hotels worldwide with competitive rates and premium service quality</p>
+                
+                <form class="search-form" id="searchForm" role="search" aria-label="Hotel search form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input 
+                                type="text" 
+                                id="destination" 
+                                name="destination"
+                                placeholder="Enter city or hotel name" 
+                                required 
+                                aria-describedby="destination-help"
+                            >
+                            <small id="destination-help" class="sr-only">Enter the city or hotel name you want to visit</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkin">Check-in Date</label>
+                            <input 
+                                type="date" 
+                                id="checkin" 
+                                name="checkin"
+                                required 
+                                aria-describedby="checkin-help"
+                            >
+                            <small id="checkin-help" class="sr-only">Select your arrival date</small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout">Check-out Date</label>
+                            <input 
+                                type="date" 
+                                id="checkout" 
+                                name="checkout"
+                                required 
+                                aria-describedby="checkout-help"
+                            >
+                            <small id="checkout-help" class="sr-only">Select your departure date</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests" required aria-describedby="guests-help">
+                                <option value="">Select guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4+ Guests</option>
+                            </select>
+                            <small id="guests-help" class="sr-only">Choose the number of guests for your stay</small>
+                        </div>
+                    </div>
+                    <button type="submit" class="search-btn" aria-label="Search for available hotels">
+                        Search Available Hotels
+                    </button>
+                </form>
+            </div>
+        </section>
+</body>
+</html>
