@@ -56,7 +56,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #F8F9FA; /* Light Gray hover */
+    color: #007BFF; /* Light Gray hover */
 }
 
 .nav-links a::after {
@@ -66,7 +66,7 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background: #FFFFFF; /* White underline */
+    background: #3071b6; /* Dark Gray underline */
     transition: width 0.3s ease;
 }
 
