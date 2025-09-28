@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Lens - Travel Suggestions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hotel Lens - Curated Itinerary</h1>
+
+    <div class="form">
+      <input id="city" type="text" placeholder="Enter city (e.g. Miami)">
+      <input id="tripType" type="text" placeholder="Trip type (beach, city, adventure)">
+      <input id="budget" type="number" placeholder="Budget ($)">
+      <input id="length" type="number" placeholder="Length of trip (days)">
+      <input id="interests" type="text" placeholder="Your interests (comma separated)">
+      <button onclick="generateItinerary()">Generate Itinerary</button>
+      <button onclick="fetchEvents()">Get Events</button>
+    </div>
+
+    <div id="output"></div>
+  </div>
+
+  <script>
+    async function generateItinerary() {
+      const city = document.getElementById("city").value;
+      const tripType = document.getElementById("tripType").value;
+      const budget = parseInt(document.getElementById("budget").value);
+      const length = parseInt(document.getElementById("length").value);
+      const interests = document.getElementById("interests").value.split(",").map(s => s.trim());
+
+      const res = await fetch("http://localhost:4000/api/itinerary", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ city, tripType, budget, length, interests })
+      });
+
+      const data = await res.json();
+      renderItinerary(data);
+    }
+
+    async function fetchEvents() {
+      const city = document.getElementById("city").value || "Miami";
+      const res = await fetch(`http://localhost:4000/api/events?city=${city}`);
+      const data = await res.json();
+      renderEvents(data.events);
+    }
+
+    function renderItinerary(data) {
+      const output = document.getElementById("output");
+      output.innerHTML = `<h2>Itinerary (Est. Budget: $${data.estimated_total})</h2>`;
+      data.days.forEach(day => {
+        output.innerHTML += `<div class="day"><h3>${day.title} - $${day.estimated}</h3>`;
+        day.blocks.forEach(b => {
+          output.innerHTML += `<p><strong>${b.when}:</strong> ${b.activity} ${b.address ? "(" + b.address + ")" : ""}</p>`;
+        });
+        output.innerHTML += `</div>`;
+      });
+    }
+
+    function renderEvents(events) {
+      const output = document.getElementById("output");
+      output.innerHTML = "<h2>Events</h2>";
+      events.forEach(e => {
+        output.innerHTML += `<div class="event"><h3>${e.name}</h3><p>${e.venue} - ${e.date}</p></div>`;
+      });
+    }
+  </script>
+</body>
+</html>
