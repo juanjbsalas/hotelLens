@@ -34,7 +34,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 500;
-    color: blue; /* White on Blue */
+    color: #007BFF; /* White on Blue */
     letter-spacing: -0.02em;
     white-space: nowrap;
 }
@@ -47,7 +47,7 @@ nav {
 }
 
 .nav-links a {
-    color: blue; /* White */
+    color: #007BFF; /* White */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
