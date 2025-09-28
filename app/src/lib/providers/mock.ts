@@ -10,12 +10,12 @@ const MOCK: Omit<Hotel, 'distanceKm'>[] = [
         minCheckInAge: 18,
         policyText: 'Minimum age to check in is 18 years old.',
         confidence: 'explicit', source: 'mock', url: '#',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1551776235-dde6d4829808?q=80&w=1200&auto=format&fit=crop',
+        thumbnailUrl: 'https://picsum.photos/seed/riverlake/1200/800',
         photos: [
-            'https://images.unsplash.com/photo-1551776235-dde6d4829808?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop'
+            'https://picsum.photos/seed/riverlake-1/1600/1000',
+            'https://picsum.photos/seed/riverlake-2/1600/1000',
+            'https://picsum.photos/seed/riverlake-3/1600/1000',
+            'https://picsum.photos/seed/riverlake-4/1600/1000'
         ]
     },
     {
@@ -24,11 +24,11 @@ const MOCK: Omit<Hotel, 'distanceKm'>[] = [
         minCheckInAge: 21,
         policyText: 'Guests must be 21 to check in.',
         confidence: 'parsed', source: 'mock', url: '#',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1488747279002-c8523379faaa?q=80&w=1200&auto=format&fit=crop',
+        thumbnailUrl: 'https://picsum.photos/seed/downtown/1200/800',
         photos: [
-            'https://images.unsplash.com/photo-1488747279002-c8523379faaa?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1496412705862-e0088f16f791?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop'
+            'https://picsum.photos/seed/downtown-1/1600/1000',
+            'https://picsum.photos/seed/downtown-2/1600/1000',
+            'https://picsum.photos/seed/downtown-3/1600/1000'
         ]
     },
     {
@@ -37,10 +37,10 @@ const MOCK: Omit<Hotel, 'distanceKm'>[] = [
         minCheckInAge: null,
         policyText: null,
         confidence: 'unknown', source: 'mock', url: '#',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1535827841776-24afc1e255ac?q=80&w=1200&auto=format&fit=crop',
+        thumbnailUrl: 'https://picsum.photos/seed/campus/1200/800',
         photos: [
-            'https://images.unsplash.com/photo-1535827841776-24afc1e255ac?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600&auto=format&fit=crop'
+            'https://picsum.photos/seed/campus-1/1600/1000',
+            'https://picsum.photos/seed/campus-2/1600/1000'
         ]
     }
     ,
@@ -50,10 +50,10 @@ const MOCK: Omit<Hotel, 'distanceKm'>[] = [
         minCheckInAge: 18,
         policyText: 'Minimum age to check in: 18 years.',
         confidence: 'explicit', source: 'mock', url: '#',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1505691723518-36a2a21c4d84?q=80&w=1200&auto=format&fit=crop',
+        thumbnailUrl: 'https://picsum.photos/seed/airport/1200/800',
         photos: [
-            'https://images.unsplash.com/photo-1505691723518-36a2a21c4d84?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1600&auto=format&fit=crop'
+            'https://picsum.photos/seed/airport-1/1600/1000',
+            'https://picsum.photos/seed/airport-2/1600/1000'
         ]
     },
     {
@@ -62,10 +62,10 @@ const MOCK: Omit<Hotel, 'distanceKm'>[] = [
         minCheckInAge: 25,
         policyText: 'Guests must be 25 to check in unless accompanied by an adult.',
         confidence: 'parsed', source: 'mock', url: '#',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1505691723519-123a3c5f0b4d?q=80&w=1200&auto=format&fit=crop',
+        thumbnailUrl: 'https://picsum.photos/seed/seaside/1200/800',
         photos: [
-            'https://images.unsplash.com/photo-1505691723519-123a3c5f0b4d?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505692794405-6d7b6f66b3d2?q=80&w=1600&auto=format&fit=crop'
+            'https://picsum.photos/seed/seaside-1/1600/1000',
+            'https://picsum.photos/seed/seaside-2/1600/1000'
         ]
     },
     {
@@ -74,10 +74,10 @@ const MOCK: Omit<Hotel, 'distanceKm'>[] = [
         minCheckInAge: 18,
         policyText: '18+ with ID required at check-in.',
         confidence: 'explicit', source: 'mock', url: '#',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=1200&auto=format&fit=crop',
+        thumbnailUrl: 'https://picsum.photos/seed/historic/1200/800',
         photos: [
-            'https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1600&auto=format&fit=crop'
+            'https://picsum.photos/seed/historic-1/1600/1000',
+            'https://picsum.photos/seed/historic-2/1600/1000'
         ]
     },
     {
@@ -86,10 +86,10 @@ const MOCK: Omit<Hotel, 'distanceKm'>[] = [
         minCheckInAge: null,
         policyText: 'Call property for age policy.',
         confidence: 'unknown', source: 'mock', url: '#',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1505692794400-5c1b8c1d3b58?q=80&w=1200&auto=format&fit=crop',
+        thumbnailUrl: 'https://picsum.photos/seed/budget/1200/800',
         photos: [
-            'https://images.unsplash.com/photo-1505692794400-5c1b8c1d3b58?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1526779259212-7d0a0d5f98b3?q=80&w=1600&auto=format&fit=crop'
+            'https://picsum.photos/seed/budget-1/1600/1000',
+            'https://picsum.photos/seed/budget-2/1600/1000'
         ]
     },
     {
@@ -98,10 +98,10 @@ const MOCK: Omit<Hotel, 'distanceKm'>[] = [
         minCheckInAge: 21,
         policyText: 'Guests must be 21+ to check in.',
         confidence: 'explicit', source: 'mock', url: '#',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=1200&auto=format&fit=crop',
+        thumbnailUrl: 'https://picsum.photos/seed/luxury/1200/800',
         photos: [
-            'https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=1600&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600&auto=format&fit=crop'
+            'https://picsum.photos/seed/luxury-1/1600/1000',
+            'https://picsum.photos/seed/luxury-2/1600/1000'
         ]
     },
     {
@@ -110,9 +110,9 @@ const MOCK: Omit<Hotel, 'distanceKm'>[] = [
         minCheckInAge: 19,
         policyText: 'Minimum check-in age is 19.',
         confidence: 'parsed', source: 'mock', url: '#',
-        thumbnailUrl:'https://images.unsplash.com/photo-1505692794405-6d7b6f66b3d2?q=80&w=1200&auto=format&fit=crop',
+        thumbnailUrl: 'https://picsum.photos/seed/countryside/1200/800',
         photos:[
-            'https://images.unsplash.com/photo-1505692794405-6d7b6f66b3d2?q=80&w=1600&auto=format&fit=crop'
+            'https://picsum.photos/seed/countryside-1/1600/1000'
         ]
     }
 ];

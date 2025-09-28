@@ -9,7 +9,7 @@ export default function HotelCard({ h }: { h: Hotel }) {
     const photos = h.photos?.length ? h.photos : (h.thumbnailUrl ? [h.thumbnailUrl] : []);
 
     return (
-        <div className="flex w-full overflow-hidden rounded-xl border bg-white shadow-sm hover:shadow-md transition">
+    <div className="flex w-full overflow-hidden rounded-xl border bg-white shadow-sm hover:shadow-md transition">
             {/* Thumbnail: top on small screens, left on sm+ */}
             <div className="w-full sm:w-44 flex-shrink-0">
                 <button
@@ -17,7 +17,7 @@ export default function HotelCard({ h }: { h: Hotel }) {
                     className="relative block h-40 w-full cursor-pointer overflow-hidden bg-gray-100 sm:h-full"
                     aria-label={`Open photos for ${h.name}`}>
                     {photos.length > 0 ? (
-                        <img src={photos[0]} alt={h.name} className="h-full w-full object-cover" />
+                        <img src={photos[0]} alt={h.name} className="h-full w-full object-cover max-h-[260px] sm:max-h-none" />
                     ) : (
                         <div className="h-full w-full bg-gray-200" />
                     )}
@@ -28,11 +28,11 @@ export default function HotelCard({ h }: { h: Hotel }) {
             </div>
 
             {/* Body */}
-            <div className="flex flex-1 flex-col p-4">
+            <div className="flex flex-1 flex-col p-4 min-w-0">
                 <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
-                        <h3 className="truncate text-lg font-semibold">{h.name}</h3>
-                        <p className="mt-1 text-sm text-gray-600 truncate">
+                        <h3 className="overflow-hidden text-ellipsis whitespace-nowrap text-lg font-semibold">{h.name}</h3>
+                        <p className="mt-1 text-sm text-gray-600 overflow-hidden text-ellipsis whitespace-nowrap">
                             {h.address ?? `${h.lat.toFixed(3)}, ${h.lng.toFixed(3)}`}
                         </p>
                         {typeof h.distanceKm === 'number' && (
@@ -45,13 +45,13 @@ export default function HotelCard({ h }: { h: Hotel }) {
                     </div>
                 </div>
 
-                <div className="mt-3 flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-4 text-sm">
+                <div className="mt-3 flex items-center justify-between gap-4 flex-wrap">
+                    <div className="flex items-center gap-4 text-sm min-w-0">
                         {h.rating != null && <span className="text-yellow-600">⭐ {h.rating.toFixed(1)}</span>}
                         {h.minCheckInAge != null && <span className="text-sm text-gray-600">Min age: {h.minCheckInAge}</span>}
                     </div>
 
-                    <div className="ml-auto flex items-center gap-3">
+                    <div className="ml-auto flex items-center gap-3 flex-shrink-0 flex-wrap">
                         {h.price != null ? (
                             <div className="flex flex-col items-end">
                                 <span className="text-lg font-bold">${h.price}</span>
